@@ -1,0 +1,12 @@
+
+# for PHP-CGI
+AddHandler php-cgi .php
+AddHandler application/x-httpd-php .html
+AddHandler application/x-httpd-php .htm
+Action php-cgi /cgi-bin/php-cgi
+
+# for php and securewebexchange
+<IfDefine SSL>
+    AddHandler php-cgi .php
+    Action php-cgi https://secure11.securewebexchange.com/tax123.ca/cgi-bin/php-cgi
+</IfDefine>
