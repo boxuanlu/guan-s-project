@@ -1,0 +1,61 @@
+<?php
+  session_start();
+  $username=$_SESSION['username'];
+
+?>
+
+    <!doctype html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+        <style type="text/css">
+            body {
+                font: 14px sans-serif;
+            }
+            
+            .wrapper {
+                width: 350px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h2>Account Info</h2>
+            <h3>
+                <?php echo $username;?>
+            </h3>
+            <form action="accountinfo.php" method="post">
+
+                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label>Change Password</label>
+                    <input type="password" name="pass" class="form-control" required>
+                </div>
+
+                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                    <label>Renter Password</label>
+                    <input type="password" name="pass1" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" name="company" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Register">
+                </div>
+
+            </form>
+    </body>
+
+    </html>
