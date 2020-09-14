@@ -25,7 +25,7 @@
 
             if(password_verify ($password, $hash) ){
 							$_SESSION['username'] = $username;
-              header('Location: accountinfo.php');
+              header('Location: user_home.php');
 
             }
             else {
