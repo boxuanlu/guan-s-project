@@ -12,7 +12,7 @@
             <h3><?php echo $username; ?> </h3>
             <ul>
               <li>Time Sheet</li>
-              <li>Employee management</li>
+              <a href="employee.php"><li>Employee management</li></a>
               <a href="accountinfo.php"><li>Account info</li></a>
             </ul>
     </body>

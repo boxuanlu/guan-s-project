@@ -84,8 +84,6 @@
 <div class="header">
   <a href="user_home.php" class="logo"><?php echo $username?></a>
   <div class="header-right">
-    <a href="#home">Home</a>
-    <a href="#contact">Contact</a>
     <a href="?log=out">Logout</a>
   </div>
 </div>
