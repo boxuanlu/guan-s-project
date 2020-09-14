@@ -2,6 +2,19 @@
   session_start();
   $username = $_SESSION['username'];
 
+  if(!isset($_SESSION['username'])){
+    session_destroy();
+    header("Location: login.html");
+    exit;
+  }
+  ####  CODE FOR LOG OUT ####
+  if(isset($_GET['log']) && ($_GET['log']=='out')){
+    //if the user logged out, delete any SESSION variables
+    session_destroy();
+    //then redirect to login page
+    header('location:login.html');
+  }
+
 ?>
 <html>
 <head>
@@ -73,7 +86,7 @@
   <div class="header-right">
     <a href="#home">Home</a>
     <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="?log=out">Logout</a>
   </div>
 </div>
 
