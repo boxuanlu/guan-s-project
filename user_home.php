@@ -3,6 +3,9 @@
 ?>
 
 <html>
+    <head>
+      <title>Home</title>
+    </head>
     <body>
         <div class="wrapper">
             <h2>Welcome!</h2>
