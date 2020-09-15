@@ -12,6 +12,7 @@
   $conn = mysqli_connect($servername, $dbusername, $dbpassword, $db);
   	if ($conn->connect_error) {
   		echo "Connection Error";
+			exit;
   	}
 
   	$sql = "SELECT * FROM login WHERE username= '$username'";
@@ -25,6 +26,7 @@
 
             if(password_verify ($password, $hash) ){
 							$_SESSION['username'] = $username;
+							$_SESSION['connection'] = $conn;
               header('Location: user_home.php');
 
             }
@@ -35,9 +37,9 @@
     }
   	else {
   		echo "username does not exist";
+
   	}
+			$conn->close();
 
-
-  $conn->close();
 
  ?>

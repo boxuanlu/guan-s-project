@@ -1,12 +1,19 @@
 <?php
-	$email = $_POST["email"];
-	$company = $_POST["company"];
-  $name = $_POST["name"];
-	$servername = "sql5c10f.megasqlservers.com";
-	$dbusername = "tax123ca73133291";
-  $dbpassword = "Y20200101";
-	$db = "Testing_tax123ca73133291";
+	include "sql.php";
 	session_start();
-	echo $_SESSION['username'];
+	$username= $_SESSION['username'];
+	$company = $_POST["company"];
+	$email = $_POST["email"];
 
+
+	$sql = "REPLACE INTO account_info(username,email,company) VALUES ('$username', '$email','$company')";
+
+	if ($conn->query($sql) === TRUE) {
+		header("refresh:2; url=http://tax123.ca/user_home.php" );
+		echo "change successfully";
+	}
+	else{
+		header("refresh:1; url=http://tax123.ca/accountinfo.php" );
+		echo "unable to do";
+	}
 ?>
