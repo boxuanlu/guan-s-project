@@ -26,13 +26,13 @@
                  while($row = $result->fetch_assoc()) {
                      $fname= $row["First_Name"];
                      $lname=$row["Last_Name"];
-                    //  $sql_1 = "SELECT id FROM Employee WHERE First_Name=$fname AND Last_Name=$lname";
                      $id =$row["id"];
-                    //  echo "<li>$fname $lname</li>";
                     
-                    echo '<input type="checkbox" name="chkl[ ]" value="$id">'.$fname.'<br />' ; 
+                    
+                    echo '<input type="checkbox" name="chkl[ ]" value="'.$id.'">'.$fname.'<br />' ; 
                     
                   }
+                  echo '<input type="submit" name="submit" value="Submit">';
                   echo '</from>';
                 
                
@@ -42,5 +42,10 @@
            ?>
          </ul>
         </div>
+        <!-- <form action = "employee_checkbox.php" method = "POST">
+
+         <input type = "submit" />
+      </form> -->
+
     </body>
 </html>

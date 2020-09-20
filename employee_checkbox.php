@@ -1,18 +1,20 @@
 
 <?php
-  include 'header.php';
+  
   include 'sql.php';
-  include 'employee.php';
+  
 
 
   $checkbox1 = $_POST['chkl'] ;  
-if ($_POST["Submit" ]=="Submit")  
-{  
+// if ($_POST["Submit" ]=="Submit")  
+// {  
+    echo $checkbox1[0];
 for ($i=0; $i<sizeof ($checkbox1);$i++) {  
-$query="INSERT INTO employee (name) VALUES ('".$checkboxl[$i]. "')";  
-mysql_query($query) or die(mysql_error());  
+$query="DELETE FROM Employee WHERE ID = '".$checkbox1[$i]. "'"; 
+
+$conn->query($query);
 } 
-echo "Record is inserted.";
-}  
+echo "Employee has been deleted.";
+// }  
 ?>
 
