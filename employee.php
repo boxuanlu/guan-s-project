@@ -29,10 +29,11 @@
                      $id =$row["id"];
                     
                     
-                    echo '<input type="checkbox" name="chkl[ ]" value="'.$id.'">'.$fname.'<br />' ; 
+                    echo '<input type="checkbox" name="chkl[ ]" value="'.$id.'">'.$id.'. '.$fname.' '.$lname.'<br />' ; 
+
                     
                   }
-                  echo '<input type="submit" name="submit" value="Submit">';
+                  echo '<br>  <input type="submit"  value="Delete Employees">';
                   echo '</from>';
                 
                
@@ -42,10 +43,6 @@
            ?>
          </ul>
         </div>
-        <!-- <form action = "employee_checkbox.php" method = "POST">
-
-         <input type = "submit" />
-      </form> -->
 
     </body>
 </html>
