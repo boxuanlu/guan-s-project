@@ -3,3 +3,11 @@
     font-size: xx-large;
     font-family: 'Times New Roman', Times, serif;
 }
+
+body {
+    background-image: url("./image/1453912.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
