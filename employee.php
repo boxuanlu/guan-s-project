@@ -21,18 +21,21 @@
              $result = $conn->query($sql);
 
              if ($result->num_rows > 0) {
-               <form action="employee_checkbox.php" method="post">;
+              echo '<form action="employee_checkbox.php" method="post">';
                  // output data of each row
                  while($row = $result->fetch_assoc()) {
                      $fname= $row["First_Name"];
                      $lname=$row["Last_Name"];
-                     $sql_1 = "SELECT id FROM Employee WHERE First_Name='$fname' AND Last_Name='$lname'";
-                     $id = $connect->query($sql_1);
+                    //  $sql_1 = "SELECT id FROM Employee WHERE First_Name=$fname AND Last_Name=$lname";
+                     $id =$row["id"];
                     //  echo "<li>$fname $lname</li>";
-                     echo "<input type="checkbox" name="chkl[ ]" value="$id">'$fname $lname'<br />  "
+                    
+                    echo '<input type="checkbox" name="chkl[ ]" value="$id">'.$fname.'<br />' ; 
+                    
                   }
-                <button type="submit" name="Add New Employee" value="Add New Employee">;
-                // echo "<button type="submit" name="Add New Employee" value="Add New Employee">";
+                  echo '</from>';
+                
+               
               }
             }
             $conn->close();
