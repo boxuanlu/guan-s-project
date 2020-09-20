@@ -21,7 +21,7 @@
              $result = $conn->query($sql);
 
              if ($result->num_rows > 0) {
-               echo "<form action="employee_checkbox.php" method="post">";
+               <form action="employee_checkbox.php" method="post">;
                  // output data of each row
                  while($row = $result->fetch_assoc()) {
                      $fname= $row["First_Name"];
@@ -31,8 +31,8 @@
                     //  echo "<li>$fname $lname</li>";
                      echo "<input type="checkbox" name="chkl[ ]" value="$id">'$fname $lname'<br />  "
                   }
-                echo "<button type="submit" name="Add New Employee" value="Add New Employee">";
-                echo "<button type="submit" name="Add New Employee" value="Add New Employee">";
+                <button type="submit" name="Add New Employee" value="Add New Employee">;
+                // echo "<button type="submit" name="Add New Employee" value="Add New Employee">";
               }
             }
             $conn->close();
