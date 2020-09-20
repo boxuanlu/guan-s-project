@@ -2,6 +2,8 @@
 body {
     font: 16px sans-serif;
 }
+
+
 .header {
   overflow: hidden;
   background-color: #AFF8FF;
@@ -25,7 +27,7 @@ body {
 }
 
 .header a:hover {
-  background-color: #AFF4FA;
+  background-color: #AFFfff;
   color: black;
 }
 
@@ -47,5 +49,17 @@ body {
 
   .header-right {
     float: none;
+    
   }
+}
+
+.header div.header-right a.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
