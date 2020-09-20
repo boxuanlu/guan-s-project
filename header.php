@@ -3,6 +3,7 @@
   include "sql.php";
 
   $username = $_SESSION['username'];
+  #if username not set will relocate
   if(!isset($_SESSION['username'])){
     session_destroy();
     header("Location: login.html");
@@ -41,7 +42,7 @@
 <div class="header">
   <a href="user_home.php" class="logo"><?php echo $displayname?></a>
   <div class="header-right">
-    <a href="?log=out">Logout</a>
+    <a href="?log=out" class="button">Logout</a>
   </div>
 </div>
 
